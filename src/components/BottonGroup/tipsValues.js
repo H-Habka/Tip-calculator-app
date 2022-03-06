@@ -1,0 +1,27 @@
+export const tips = [
+    {
+        id:1,
+        text:'5%',
+        value:5
+    },
+    {
+        id:2,
+        text:'10%',
+        value:10
+    },
+    {
+        id:3,
+        text:'15%',
+        value:15
+    },
+    {
+        id:4,
+        text:'25%',
+        value:25
+    },
+    {
+        id:5,
+        text:'50%',
+        value:50
+    },
+]
