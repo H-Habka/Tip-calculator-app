@@ -47,7 +47,7 @@ export const Input = styled.input`
 export const Label = styled.div`
     margin-bottom: 7px;
     margin-top: 15px;
-    color:${props => props.error? 'red' : 'hsl(184, 14%, 56%)'};
+    color:${props => props.error? '#FF5733' : 'hsl(184, 14%, 56%)'};
 
     @media screen and (max-width:500px){
         &{
