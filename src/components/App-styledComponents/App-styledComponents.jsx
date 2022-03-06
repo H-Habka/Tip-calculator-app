@@ -33,6 +33,8 @@ export const Container = styled.div`
 export const Row0 = styled.div`
   width: 60%;
   border-radius: 15px;
+  diplay:flex;
+  justify-content:center;
 
   @media screen and (max-width:500px){
     &{

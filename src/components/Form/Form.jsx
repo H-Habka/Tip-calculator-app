@@ -32,7 +32,7 @@ const Form = ({
             <ButtonGroup 
                 handleButtomClick={(e) => {
                     handleValuesChange(setTip,e.target.value)
-                    handleValuesChange(setCustomTip,0)
+                    handleValuesChange(setCustomTip,'')
                 }}
                 handleInputChange={(e) => {
                     handleValuesChange(setTip, 0 )

@@ -29,7 +29,7 @@ export const Button = styled.button`
 
   &:active {
     outline: none;
-    background: hsl(172, 67%, 45%);
+    background: hsl(185, 41%, 84%);
     color: hsl(183, 100%, 15%)
   }
   
@@ -51,6 +51,9 @@ export const CustomInput = styled.input`
   font-size:24px;
   padding-right: 15px;
   color:hsl(184, 14%, 56%);
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 
   &:focus {
     outline: none;

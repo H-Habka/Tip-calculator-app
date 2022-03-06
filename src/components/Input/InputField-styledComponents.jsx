@@ -33,15 +33,22 @@ export const Input = styled.input`
     font-size: 24px;
     color:hsl(184, 14%, 56%);
     width: 100%;
-    ${props => props.error ? 'box-shadow: 0px 0px 2px red;' : ''}
+    ${props => props.error ? 'box-shadow: 0px 0px 2px 1px #FF5733;' : ''}
+
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
 
     &:focus {
         outline: none;
-        box-shadow: 0px 0px 2px hsl(172, 67%, 45%);
+        box-shadow: 0px 0px 2px hsl(172, 67%, 45%) !important;
+    }
+    &::focus-visible {
+        outline: none !important;
+        box-shadow: 0px 0px 2px hsl(172, 67%, 45%) !important;
     }
     &:active {
         outline: none;
-        box-shadow: 0px 0px 2px 2px hsl(172, 67%, 45%);
+        box-shadow: 0px 0px 2px 2px hsl(172, 67%, 45%) !important;
     }
 `
 export const Label = styled.div`
@@ -57,7 +64,6 @@ export const Label = styled.div`
       }
     
 `
-
 export const LabelsCont = styled.div`
       display:flex;
       justify-content:space-between

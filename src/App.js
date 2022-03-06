@@ -10,13 +10,14 @@ const App  = () =>  {
   const [bill, setBill] = useState(0)
   const [numOfPeople, setNumOfPeople] = useState(0)
   const [tip, setTip] = useState(0)
-  const [customTip, setCustomTip] = useState(0)
+  const [customTip, setCustomTip] = useState('')
   const [disabled,setDisabled ]  = useState(true)
 
     const handleValuesChange = (setValue, value) => {
       setValue(Number(value))
     }
     useEffect( () => {
+      console.log("fired")
       let tipValue = customTip ? customTip : tip 
         if(numOfPeople){
           let tipAmountValue = (bill * tipValue) / (100 * numOfPeople)
@@ -24,14 +25,14 @@ const App  = () =>  {
           setTotal(tipAmountValue + bill / numOfPeople)
           setDisabled(false)
         }
-    })
+    },[customTip, tip, numOfPeople])
     const handleResetClick = () => {
       setTipAmount('0.00')
       setTotal('0.00')
       setBill(0)
       setNumOfPeople(0)
       setTip(0)
-      setCustomTip(0)
+      setCustomTip('')
       setDisabled(true)
     }
 
